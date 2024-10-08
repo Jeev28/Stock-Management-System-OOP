@@ -32,13 +32,21 @@ User Info -> System accomodates two roles: Admin and Customer
 - view and cancel basket,
 - complete purchase using either Paypal or Credit Card.
 
-
 Payment Info -> Two methods: Paypal and Credit Card. 
 Credit Card requires a 6-digit card number and a 3-digit security code. 
 PayPal requires a valid email address. 
 The payment function updates the stock, clears the basket and generates a receipt (layout dependent on payment method chosen - all receipts contain amount paid, today's date, customer's address and Card Number OR PayPal email address).
 
 ## Class Diagram
+<img width="960" alt="Screenshot 2024-10-08 at 12 46 20" src="https://github.com/user-attachments/assets/998d1c29-bf72-49eb-a4c1-8c7494408430">
+
+##### You may need to enlarge your screen or download this image to view properly
+**Important Details**:
+1. Abstraction is used for different types of Users - Customer and Admin classes inherit from the abstract User class (Inheritance).
+2. Abstraction is used for different types of Products - Mouse and Keyboard.
+3. An Interface is used for the Payment Method which is implemented by Paypal and Credit Card classes (Polymorphism). The Payment Method Interface provides a way to treat different payment methods uniformly, but have differing implementations. 
+4. Encapsulation is used throughout with Private/Protected/Public modifiers, and Getter and Setter methods in most classes.
+5. Association, Aggregation and Composition -> see diagram.
 
 ## Installation
 Ensure that you have Java installed on your local computer. You check by running the following command in Terminal: ```java -version```
